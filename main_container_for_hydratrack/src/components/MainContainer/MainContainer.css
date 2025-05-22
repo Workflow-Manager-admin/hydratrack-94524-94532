@@ -1,0 +1,239 @@
+/* MainContainer specific styles for HydraTrack */
+
+.hydra-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--kavia-dark);
+  color: var(--text-color);
+}
+
+/* Header styles */
+.hydra-header {
+  padding: 16px;
+  background-color: var(--kavia-dark);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.hydra-logo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hydra-logo .logo-symbol {
+  color: var(--kavia-orange);
+  font-size: 1.5rem;
+}
+
+.hydra-header-controls {
+  display: flex;
+  gap: 10px;
+}
+
+/* Main content styles */
+.hydra-main-content {
+  flex: 1;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hydra-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Progress section */
+.hydra-progress-section {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.hydra-progress-section h2 {
+  margin-top: 0;
+  color: var(--kavia-orange);
+}
+
+.hydra-progress-container {
+  margin: 20px 0;
+}
+
+.hydra-progress-bar {
+  height: 24px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.hydra-progress-fill {
+  height: 100%;
+  background-color: var(--kavia-orange);
+  border-radius: 12px;
+  transition: width 0.3s ease;
+}
+
+.hydra-progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.hydra-goal-reached {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: rgba(232, 122, 65, 0.2);
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* Quick add section */
+.hydra-quick-add-section {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.hydra-quick-add-section h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.hydra-quick-add-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* History section */
+.hydra-history-section {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.hydra-history-section h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.hydra-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.hydra-history-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.hydra-history-time {
+  color: var(--text-secondary);
+}
+
+.hydra-history-amount {
+  text-align: center;
+}
+
+.hydra-history-total {
+  text-align: right;
+  font-weight: 500;
+}
+
+/* Footer styles */
+.hydra-footer {
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.02);
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.hydra-tip {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* Button styles */
+.hydra-btn {
+  background-color: var(--kavia-orange);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.hydra-btn:hover {
+  background-color: #FF8B4D;
+}
+
+.hydra-btn-add {
+  background-color: #4CAF50; /* Green for adding */
+}
+
+.hydra-btn-add:hover {
+  background-color: #5ec063;
+}
+
+.hydra-btn-custom {
+  background-color: #2196F3; /* Blue for custom */
+}
+
+.hydra-btn-custom:hover {
+  background-color: #42a5f5;
+}
+
+.hydra-btn-reset {
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 100%;
+}
+
+.hydra-btn-reset:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .hydra-quick-add-buttons {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .hydra-history-item {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+  
+  .hydra-history-total {
+    grid-column: span 2;
+    text-align: left;
+    margin-top: 5px;
+  }
+}
